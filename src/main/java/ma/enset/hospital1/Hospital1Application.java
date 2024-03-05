@@ -19,14 +19,12 @@ import java.util.stream.Stream;
 
 @SpringBootApplication
 public class Hospital1Application {
-
 	public static void main(String[] args) {
 
 		SpringApplication.run(Hospital1Application.class, args);
 	}
 
 	@Bean
-
 	CommandLineRunner start(IHospitalService hospitalService,
 							PatientRepository patientRepository,
 							MedecinRepository medecinRepository,
@@ -84,10 +82,6 @@ public class Hospital1Application {
 			consultation.setRendezVous(rendezVous1);
 			consultation.setRapport("Rapport de  la consultation.....");
 			hospitalService.saveConsultation(consultation);
-
-
-
-
 
 		};
 	}
